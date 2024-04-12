@@ -12,7 +12,6 @@ public class Main {
 
 		int codigo, quant;
 		double preco, valorFinal;
-		preco = 0;
 		
 		System.out.println("Escolha um item: ");
 		System.out.println("[1] Cachorro-Quente;   Preço: R$4,00");
@@ -22,34 +21,35 @@ public class Main {
 		System.out.println("[5] Refrigerante;  Preço: R$1,50");
 		codigo = sc.nextInt();
 		
+		switch (codigo) {
+		case 1: 
+			preco = 4.00;
+		break;
+		
+		case 2:
+			preco = 4.50;
+		break;
+		
+		case 3: 
+			preco = 5.00;
+		break;
+		
+		case 4:
+			preco = 2.00;
+		break;
+		
+		case 5:
+			preco = 1.50;
+		break;
+		
+		default:
+			preco = 0.00;
+			System.out.println("CÓDIGO INVÁLIDO!");
+		break;
+		}
+		
 		System.out.println("Qual a quantidade?");
 		quant = sc.nextInt();
-		
-		if (codigo == 1) {
-			preco = 4;
-		}
-		
-		else if (codigo == 2) {
-			preco = 4.5;
-		}
-		
-		else if (codigo == 3) {
-			preco = 5;
-		}
-		
-		else if (codigo == 4) {
-			preco = 2;
-			
-		}
-		
-		else if (codigo == 5) {
-			preco = 1.5;
-		}
-		
-		else {
-			System.out.println("CÓDIGO DE PRODUTO INVÁLIDO!");
-			
-		}
 		
 		valorFinal = quant * preco;
 		
