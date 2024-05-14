@@ -1,0 +1,18 @@
+package exVet1;
+
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Quantos números irá digitar? ");
+		int n = sc.nextInt();
+		
+		int[] vect = new int [n];
+
+	}
+
+}
