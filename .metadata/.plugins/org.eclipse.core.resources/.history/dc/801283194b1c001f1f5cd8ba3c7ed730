@@ -1,0 +1,15 @@
+package datas;
+
+import java.time.LocalDateTime;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		LocalDateTime d01 = LocalDateTime.now();
+		
+		System.out.println(d01);
+
+	}
+
+}
