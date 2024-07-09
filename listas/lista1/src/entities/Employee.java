@@ -1,55 +1,53 @@
 package entities;
 
 public class Employee {
-
+	
+	private String name;
 	private Integer id;
 	private Double salary;
-	private String name;
 	
-	public Employee (String name, Double salary, Integer id) {
+	public Employee() {
+		
+	}
+	
+	public Employee (String name, Integer id, Double salary) {
 		this.name = name;
-		this.salary = salary;
 		this.id = id;
-		
+		this.salary = salary;
 	}
-	
-	public void setName (String name) {
-		this.name = name;
-		
-	}
-	
-	public String getName () {
+
+	public String getName() {
 		return name;
-		
 	}
-	
-	public void setSalary (Double salary) {
-		this.salary = salary;
-		
+
+	public void setName(String name) {
+		this.name = name;
 	}
-	
-	public Double getSalary () {
-		return salary;
-		
-	}
-	
-	public void setId (Integer id) {
-		this.id = id;
-		
-	}
-	
-	public Integer getId () {
+
+	public Integer getId() {
 		return id;
-		
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public Double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(Double salary) {
+		this.salary = salary;
 	}
 	
-	public void increaseSalary (Double percentage) {
-		salary = (salary * percentage) + salary;
-		
+	public void increaseSalary(Double percentage) {
+		salary += salary * (percentage/100);
 	}
 	
-	public String toString () {
-		return name + ", " + id + ", " + salary;
-		
-	}	
+	public String toString() {
+		StringBuilder sb = new StringBuilder();
+		sb.append(id + ", " + name + ", " + salary + "\n");
+		return sb.toString();
+	}
+
 }
