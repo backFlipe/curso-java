@@ -11,8 +11,6 @@ public class Programm {
 
 	public static void main(String[] args) throws ParseException {
 		
-		//ESSA SOLUÇÃO DE PROBLEMA É PÉSSIMA PORQUE A CLASSE "Programm" ESTÁ RESOLVENDO UM PROBLEMA QUE A CLASSE "Reservation" DEVERIA RESOLVER
-		
 		Scanner sc = new Scanner (System.in);
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -36,19 +34,13 @@ public class Programm {
 			System.out.print("Check-out date (DD/MM/YYYY): ");
 			checkOut = sdf.parse(sc.next());
 			
-			Date now = new Date();
-			
-			if (checkIn.before(now) || checkOut.before(now)) {
-				System.out.println("Reservation dates for update must be future dates!");
-			}
-			else if(!checkOut.after(checkIn)) {
-				System.out.println("Check-out date must be after check-in date!");
+			String error = reservation.updateDates(checkIn, checkOut);
+			if (error != null) {
+				System.out.println("ERROR: " + error);
 			}
 			else {
-				reservation.updateDates(checkIn, checkOut);
-				System.out.println("Reservation: " + reservation);
+				System.out.println(reservation);
 			}
-		
 		}
 		
 		sc.close();
