@@ -26,8 +26,13 @@ public class Program {
 			System.out.println(file);
 		}
 		
-		boolean success = new File(strPath + "/Hello!").mkdir();
+		boolean success = new File(strPath + "/Hello").mkdir();
 		System.out.println("New Directory: " + success);
+		
+		System.out.println();
+		System.out.println("getName: " + path.getName());
+		System.out.println("getParent: " + path.getParent());
+		System.out.println("getPath: " + path.getPath());
 		
 		sc.close();
 	}
