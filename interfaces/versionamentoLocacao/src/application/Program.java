@@ -22,8 +22,8 @@ public class Program {
 		
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
 		
-		System.out.print("Enter with the rental data");
-		System.out.print("Car model: \n");
+		System.out.println("Enter with the rental data");
+		System.out.print("Car model: ");
 		String model = sc.nextLine();
 		System.out.print("Start (DD/MM/YYYY hh:mm): ");
 		LocalDateTime start = LocalDateTime.parse(sc.nextLine(), dtf);

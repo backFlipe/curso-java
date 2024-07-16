@@ -1,13 +1,13 @@
 package services;
 
-public class BrazilTaxServices{
+public class BrazilTaxServices implements TaxService{
 	
-	public Double tax (Double ammount) {
-		if (ammount <= 100) {
-			return ammount * 0.2;
+	public double tax (double amount) {
+		if (amount <= 100) {
+			return amount * 0.2;
 		}
 		else {
-			return ammount * 0.15;
+			return amount * 0.15;
 		}
 	}
 
