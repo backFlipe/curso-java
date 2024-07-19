@@ -14,11 +14,5 @@ public class USAInterestService implements InterestService{
 		return interestRate;
 	}
 
-	public double payment(double amount, int months) {
-		if (months < 1) {
-			throw new InvalidParameterException("Can not be 0 months!");
-		}
-		return amount * Math.pow(1 + interestRate / 100, months);
-	}
 
 }
